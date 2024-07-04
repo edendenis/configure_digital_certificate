@@ -1,21 +1,21 @@
-# Como configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no `Linux Ubuntu`
+# Como configurar/instalar/usar o `resetar, resetar e reinstalar Gerenciador de Janelas XFCE` no `Linux Ubuntu`
 
 ## Resumo
 
-Neste documento estão contidos os principais comandos e configurações para configurar/instalar/usar o `aparência do ambiente de desktop` no `Linux Ubuntu`.
+Neste documento estão contidos os principais comandos e configurações para configurar/instalar/usar o `resetar, resetar e reinstalar Gerenciador de Janelas XFCE` no `Linux Ubuntu`.
 
 ## _Abstract_
 
-_This document contains the main commands and settings for configuring/installing/using the `aparência do ambiente de desktop` on `Linux Ubuntu`._
+_This document contains the main commands and settings for configuring/installing/using the `reset, reset and reinstall XFCE Window Manager` on `Linux Ubuntu`._
 
 ## Descrição [2]
 
-### `Appearance`
+### `XFCE`
 
-A aparência do ambiente de desktop se refere à estética visual e à disposição dos elementos gráficos na interface do usuário de um sistema operacional. Isso inclui o tema geral, como cores, ícones, fontes e estilo das janelas, bem como a organização e o layout dos painéis, menus e widgets. A personalização da aparência permite aos usuários adaptar o ambiente de trabalho às suas preferências estéticas e funcionais, melhorando a experiência de uso do sistema operacional.
+O XFCE é um ambiente de desktop leve e rápido projetado para sistemas Unix-like. Conhecido por sua eficiência e baixo consumo de recursos, é uma escolha popular para usuários que buscam um ambiente de trabalho responsivo mesmo em hardware mais antigo ou limitado. O XFCE oferece uma interface familiar e configurável, com painéis personalizáveis, gerenciador de janelas simples e uma seleção de aplicativos próprios que complementam a experiência do usuário de forma eficaz.
 
 
-## 1. Como configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no `Linux Ubuntu` [1][3]
+## 1. Como configurar/instalar/usar o `resetar, resetar e reinstalar Gerenciador de Janelas XFCE` no `Linux Ubuntu` [1][3]
 
 Para configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no `Linux Ubuntu`, você pode seguir estes passos:
 
@@ -40,52 +40,31 @@ Para configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no
     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
     
 
-Para `alterar a aparência do seu ambiente de desktop` para o padrão do `XFCE` ou outro no `Ubuntu 22.04 LTS`, você precisará instalar o ambiente de desktop `XFCE` e configurar sua sessão para usá-lo. Aqui estão os passos para fazer isso:
+Se você está usando o ambiente de desktop `XFCE` no Ubuntu e está enfrentando problemas com os botões de fechar, maximizar e minimizar, as etapas de resolução são um pouco diferentes das do GNOME. Vamos ajustar as recomendações para o `XFCE`:
 
-1. **Instalar o `XFCE`**: Abra um terminal.
+1. **Reiniciar o Gerenciador de Janelas `XFCE`**: Você pode tentar reiniciar o gerenciador de janelas `XFCE` para ver se isso resolve o problema. Você pode fazer isso através de um comando no terminal: `xfwm4 --replace`
 
-2. **Execute o seguinte comando para instalar o `XFCE`**:
+    Isso reiniciará o gerenciador de janelas e pode restaurar os botões que estão faltando.
 
-    ```
-    sudo apt update
-    sudo apt install xubuntu-desktop
-    ```
+2. **Verificar as Configurações do Gerenciador de Janelas**: No `XFCE`, você pode configurar os botões da janela e seu comportamento diretamente nas configurações do gerenciador de janelas. Acesse: `Menu -> Configurações -> Gerenciador de Janelas`
 
-    Isso instalará o ambiente de desktop XFCE e todos os pacotes associados.
+    Verifique se os botões de minimizar, maximizar e fechar estão configurados para aparecer na barra de título das janelas.
 
-2. **Selecionar o `XFCE` na Tela de Login**:
+3. **Resetar as Configurações do `XFCE`**: Se as etapas anteriores não resolverem o problema, você pode tentar resetar as configurações do gerenciador de janelas para os padrões de fábrica: `xfconf-query -c xfwm4 -p / -R -r`
 
-    2.1 Faça logout da sua sessão atual.
+    Esse comando removerá todas as alterações de configuração personalizadas, revertendo para os padrões do sistema.
 
-    2.2 Na tela de login, clique no ícone de engrenagem ou no botão de opções de sessão (geralmente no canto inferior direito ou próximo ao campo de entrada de senha).
+4. **Verificar Temas**: Às vezes, um tema pode interferir na aparência ou na funcionalidade dos botões da janela. Tente mudar para um tema padrão ou diferente através do: `Menu -> Configurações -> Aparência`
 
-    2.3 Selecione `"Xubuntu Session"` ou `"XFCE Session"` na lista de opções.
+5. **Reinstalar o Gerenciador de Janelas `XFCE`**: Se nada mais funcionar, você pode considerar reinstalar o `XFCE Window Manager (xfwm4)`: `sudo apt-get install --reinstall xfwm4`
 
-    2.4 Faça login com suas credenciais.
+Isso reinstalará o gerenciador de janelas, o que pode corrigir qualquer problema de configuração ou arquivo corrompido.
 
-3. **Ajustar as Configurações do `XFCE`**
-
-    3.1 Depois de fazer login no `XFCE`, você pode ajustar as configurações da aparência e do comportamento do desktop através do `"Configurações"` do `XFCE`.
-
-    3.2 Vá para `"Menu" -> "Configurações" -> "Ajustes"` para ajustar temas, ícones, fontes e outras opções de aparência.
-
-4. **Remover o Ambiente de Desktop `GNOME` (Opcional)**:
-
-    Se você desejar remover o ambiente de desktop `GNOME` para liberar espaço e simplificar a configuração, você pode fazer isso com o seguinte comando:
-    
-    ```
-    sudo apt purge ubuntu-desktop gnome-shell gdm3
-    sudo apt autoremove
-    ```
-
-**Conclusão**
-
-Após seguir esses passos, você deverá estar usando o ambiente de desktop XFCE com a aparência padrão do Xubuntu no Ubuntu `22.04 LTS`. Se precisar de mais alguma coisa ou tiver outras perguntas, estou à disposição para ajudar!
-
+Experimente estas soluções e veja se alguma delas resolve o problema dos botões de controle da janela no `XFCE`.
 
 ### 1.1 Código completo para configurar/instalar/usar
 
-Para configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
+Para configurar/instalar/usar o `resetar, resetar e reinstalar Gerenciador de Janelas XFCE` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
@@ -98,7 +77,7 @@ Para configurar/instalar/usar o `alterar a aparência do ambiente de desktop` no
 
 ## Referências
 
-[1] OPENAI. ***Alterar a aparência do ambiente de desktop.*** Disponível em: <https://chatgpt.com/c/3f876076-72b6-4270-b6d9-e559c94bf490> (texto adaptado). Acessado em: 18/03/2023 17:11.
+[1] OPENAI. ***Consertando botões Ubuntu gnome.*** Disponível em: <https://chatgpt.com/c/15a3dddc-ea0e-426a-8fff-4db9036f009e> (texto adaptado). Acessado em: 18/03/2023 17:11.
 
 [2] OPENAI. ***Vs code: editor popular.*** Disponível em: <https://chat.openai.com/c/b640a25d-f8e3-4922-8a3b-ed74a2657e42> (texto adaptado). Acessado em: 18/03/2024 17:10.
 
