@@ -15,7 +15,7 @@
 # 
 # ### `XFCE`
 # 
-# O XFCE é um ambiente de desktop leve e rápido projetado para sistemas Unix-like. Conhecido por sua eficiência e baixo consumo de recursos, é uma escolha popular para usuários que buscam um ambiente de trabalho responsivo mesmo em hardware mais antigo ou limitado. O XFCE oferece uma interface familiar e configurável, com painéis personalizáveis, gerenciador de janelas simples e uma seleção de aplicativos próprios que complementam a experiência do usuário de forma eficaz.
+# O `XFCE` é um ambiente de _desktop_ leve e rápido projetado para sistemas Unix-like. Conhecido por sua eficiência e baixo consumo de recursos, é uma escolha popular para usuários que buscam um ambiente de trabalho responsivo mesmo em hardware mais antigo ou limitado. O `XFCE` oferece uma interface familiar e configurável, com painéis personalizáveis, gerenciador de janelas simples e uma seleção de aplicativos próprios que complementam a experiência do usuário de forma eficaz.
 # 
 
 # ## 1. Como configurar/instalar/usar o `resetar, resetar e reinstalar Gerenciador de Janelas XFCE` no `Linux Ubuntu` [1][3]
